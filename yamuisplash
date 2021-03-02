@@ -1,0 +1,4 @@
+#!/bin/sh
+
+touch /tmp/.yamuisplash.done
+yamui --imagesdir=/usr/share/yamuisplash sailfish_logo_rgb

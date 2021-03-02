@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple yamui splash screen for SailfishOS
+Before=droid-hal-init.service
+After=tmp.mount
+DefaultDependencies=no
+# To avoid starting again when swichting from emergency-call.target to graphical.target
+ConditionPathExists=!/tmp/.yamuisplash.done
+
+[Service]
+Type=simple
+EnvironmentFile=-/var/lib/environment/compositor/*.conf
+ExecStart=/bin/sh /usr/bin/yamuisplash
+# make sure we run for at least 5 seconds for any touch initialization sequences to finish.
+ExecStartPost=/bin/sleep 5
