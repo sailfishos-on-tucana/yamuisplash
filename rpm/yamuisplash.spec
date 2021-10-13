@@ -1,6 +1,6 @@
 Name:		yamuisplash
 Summary:	Simple splash screen for SailfishOS
-Version:	1.0.0
+Version:	1.0.2
 Release:	1
 Url:		https://github.com/sailfishos/yamuisplash
 License:	ASL 2.0
@@ -8,7 +8,7 @@ Source0:	%{name}-%{version}.tar.gz
 
 Conflicts:	qmlsplash
 Requires:	yamui
-BuildRequires:	systemd
+BuildRequires:	pkgconfig(systemd)
 
 %description
 Yamuisplash is a simple splash screen for SailfishOS.
