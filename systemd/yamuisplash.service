@@ -10,5 +10,5 @@ ConditionPathExists=!/tmp/.yamuisplash.done
 Type=simple
 EnvironmentFile=-/var/lib/environment/compositor/*.conf
 ExecStart=/bin/sh /usr/bin/yamuisplash
-# make sure we run for at least 5 seconds for any touch initialization sequences to finish.
-ExecStartPost=/bin/sleep 5
+# make sure we run for at least 25 seconds for any touch initialization sequences to finish.
+ExecStartPost=/bin/sleep 25
